@@ -20,6 +20,7 @@ if %asw%==g goto getModules
 if %asw%==exit goto END
 if %asw%==update goto update
 if%asw%==rmodules goto rmodules
+if%asw%==info goto info
 
 goto end
 
@@ -47,3 +48,20 @@ exit
 del Scripts\modules\backup.bat
 goto END
 exit
+
+:info
+echo .
+echo Informations
+echo ===========================================================================
+echo.
+echo Script created by Dennis B.
+echo GitHub: https://github.com/portalninja2/
+echo Email: dennis@systemcomb.de
+echo Published Copys of this script are not allowed!
+echo.
+echo ===========================================================================
+echo Hidden Commands:
+echo.
+echo update -> Will update the core features
+echo rmodules -> Will remove all Modules, can be installed without data loss
+echo 

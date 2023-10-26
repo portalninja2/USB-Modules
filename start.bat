@@ -68,6 +68,3 @@ echo.
 echo ===========================================================================
 pause
 goto Auswahlmenue
-echo.
-pause
-goto Auswahlmenue

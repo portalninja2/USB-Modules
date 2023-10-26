@@ -28,6 +28,7 @@ if %mdasw%==back goto Auswahlmenue
 curl --output Scripts\modules\backup.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/backup.bat --ssl-no-revoke
 
 :END
+del get-modules.bat
 echo bye
 pause >nul
 exit

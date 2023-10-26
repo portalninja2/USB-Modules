@@ -38,5 +38,4 @@ goto getModules
 :END
 start USB-Modules.bat
 echo bye
-pause >nul
 exit

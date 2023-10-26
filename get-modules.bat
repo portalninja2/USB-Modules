@@ -10,7 +10,7 @@ echo Treffe eine Auswahl
 echo =================================
 echo.
 echo [B]BackUP - Modul
-echo [PI]Programm Installazion - Modul
+echo [PI]Programm Installations - Modul
 echo [I]ISO Download - Modul
 echo [P]Ping - Modul
 echo [G]GitClone - Modul

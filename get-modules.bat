@@ -10,11 +10,11 @@ echo Treffe eine Auswahl
 echo =================================
 echo.
 echo [B]BackUP - Modul
-echo [PI]Programm Installations - Modul
-echo [I]ISO Download - Modul
-echo [P]Ping - Modul
-echo [G]GitClone - Modul
-echo [S]Shutdown - Modul
+echo [PI]Programm Installations - Modul (Wartung)
+echo [I]ISO Download - Modul (Wartung)
+echo [P]Ping - Modul (Wartung)
+echo [G]GitClone - Modul (Wartung)
+echo [S]Shutdown - Modul (Wartung)
 echo.
 
 set mdasw=0

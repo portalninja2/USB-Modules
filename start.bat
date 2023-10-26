@@ -21,6 +21,7 @@ if %asw%==exit goto END
 if %asw%==update goto update
 if %asw%==rmodules goto rmodules
 if %asw%==info goto info
+if %asw%==init goto init
 
 goto end
 
@@ -66,7 +67,27 @@ echo Hidden Commands:
 echo.
 echo [update] -- Will update the core features
 echo [rmodules] -- Will remove all Modules, can be installed without data loss
+echo [init] -- Will initialize the FileSystem
 echo.
 echo ===========================================================================
+pause
+goto Auswahlmenue
+
+:init
+mkdir Dokumente
+mkdir Bilder
+mkdir Videos
+mkdir BackUP's
+mkdir Scripts
+mkdir Musik
+mkdir Zip's
+mkdir apps
+mkdir Scripts\vorgefertigt
+mkdir Scripts\modules
+mkdir Scripts\bearbeitung
+mkdir Scripts\fertig
+mkdir Scripts\neu
+mkdir BackUP's\local
+mkdir BackUP's\remote
 pause
 goto Auswahlmenue

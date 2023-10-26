@@ -62,8 +62,8 @@ echo.
 echo ===========================================================================
 echo Hidden Commands:
 echo.
-echo update -> Will update the core features
-echo rmodules -> Will remove all Modules, can be installed without data loss
+echo update -- Will update the core features
+echo rmodules -- Will remove all Modules, can be installed without data loss
 echo.
 echo ===========================================================================
 pause

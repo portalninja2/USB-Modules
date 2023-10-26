@@ -42,5 +42,5 @@ start update-file.bat
 end
 
 :rmodules
-rm Scripts\modules\backup.bat
+del Scripts\modules\backup.bat
 end

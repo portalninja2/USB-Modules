@@ -37,7 +37,7 @@ exit
 
 :update
 del Scripts\modules\modules-store
-curl --output USB-Modules.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/update-file.bat --ssl-no-revoke
+curl --output update-file.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/update-file.bat --ssl-no-revoke
 start update-file.bat
 end
 

@@ -18,7 +18,7 @@ echo [S]Shutdown - Modul
 echo.
 
 set mdasw=0
-set /p mdasw="Bitte trffe eine Auswahl: "
+set /p mdasw="Bitte treffe eine Auswahl: "
 
 if %mdasw%==b goto BackUP
 if %mdasw%==pi goto programm

@@ -17,6 +17,8 @@ set /p asw="Bitte eine Auswahl treffen: "
 if exist Scripts\modules\backup.bat if %asw%==b goto BackUP
 if %asw%==g goto getModules
 if %asw%==exit goto END
+if %asw%==update goto update
+if%asw%==rmodules goto rmodules
 
 goto end
 
@@ -33,4 +35,12 @@ goto END
 echo bye
 exit
 
+:update
+rm Scripts\modules\modules-store
+curl --output USB-Modules.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/update-file.bat --ssl-no-revoke
+start update-file.bat
+end
 
+:rmodules
+rm Scripts\modules\backup.bat
+end

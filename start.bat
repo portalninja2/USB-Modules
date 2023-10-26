@@ -38,7 +38,7 @@ goto END
 
 :portable
 start apps\Start.exe
-goto END
+goto Auswahlmenue
 
 :END
 echo bye

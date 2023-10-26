@@ -19,8 +19,8 @@ if exist Scripts\modules\backup.bat if %asw%==b goto BackUP
 if %asw%==g goto getModules
 if %asw%==exit goto END
 if %asw%==update goto update
-if%asw%==rmodules goto rmodules
-if%asw%==info goto info
+if %asw%==rmodules goto rmodules
+if %asw%==info goto info
 
 goto end
 
@@ -64,6 +64,10 @@ echo Hidden Commands:
 echo.
 echo update -> Will update the core features
 echo rmodules -> Will remove all Modules, can be installed without data loss
+echo.
+echo ===========================================================================
+pause
+goto Auswahlmenue
 echo.
 pause
 goto Auswahlmenue

@@ -36,7 +36,7 @@ echo bye
 exit
 
 :update
-rm Scripts\modules\modules-store
+del Scripts\modules\modules-store
 curl --output USB-Modules.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/update-file.bat --ssl-no-revoke
 start update-file.bat
 end

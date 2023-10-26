@@ -49,4 +49,5 @@ pause
 goto backupmenue
 
 :END
+start USB-Modules.bat
 exit

@@ -1,4 +1,7 @@
 @echo off
+mkdir Scripts\modules
+cls
+
 @title GetModules
 :getModules
 cls
@@ -28,7 +31,6 @@ if %mdasw%==back goto Auswahlmenue
 :BackUP
 cls
 curl --output Scripts\modules\backup.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/backup.bat --ssl-no-revoke
-start Scripts\modules\backup.bat
 goto getModules
 
 :END

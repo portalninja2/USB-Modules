@@ -6,7 +6,7 @@ echo BackUP Aktionen:
 echo =====================
 echo [c] Erstellen eines lokalen BackUP's (Diese Instanz)
 echo [r] BackUP von einem Link erstellen
-echo [m] BackUP von einem anderen Datenträger erstellen
+echo [m] BackUP von einem anderen Ordner erstellen
 echo [g] BackUP wiederherstellen (lokal)
 echo [gr] BackUP wiederherstellen (Remote)
 

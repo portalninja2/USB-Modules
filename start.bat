@@ -23,7 +23,6 @@ goto end
 :getModules
 curl --output Scripts\modules\modules-store.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/get-modules.bat --ssl-no-revoke
 start Scripts\modules\modules-store.bat
-pause >nul
 goto END
 
 :BackUP
@@ -32,7 +31,6 @@ goto END
 
 :END
 echo bye
-pause >nul
 exit
 
 

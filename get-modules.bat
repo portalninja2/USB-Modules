@@ -26,7 +26,7 @@ if %mdasw%==i goto ISO
 if %mdasw%==p goto ping
 if %mdasw%==g goto gitclone 
 if %mdasw%==s goto shutdown 
-if %mdasw%==back goto Auswahlmenue
+if %mdasw%==back goto :END
 
 :BackUP
 cls

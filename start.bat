@@ -1,3 +1,4 @@
+del update-file.bat
 mkdir Scripts\modules
 @echo off
 :Auswahlmenue

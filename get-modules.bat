@@ -24,6 +24,8 @@ if %mdasw%==g goto gitclone
 if %mdasw%==s goto shutdown 
 if %mdasw%==back goto Auswahlmenue
 
+:BackUP
+curl --output Scripts\modules\backup.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/backup.bat --ssl-no-revoke
 
 :END
 echo bye

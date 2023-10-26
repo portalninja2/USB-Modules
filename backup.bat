@@ -27,7 +27,7 @@ echo Beta!
 set name=0
 set /p name="Trage deinen Zusatz Namen ein: "
 set "name=LocalUSB-%name%.zip"
-set "files=apps Bilder Dokumente Musik	Scripts	Videos	Zip's USB-Modules.bat Setup.bat filesystem_script.bat"
+set "files=apps Bilder Dokumente Musik	Scripts	Videos	Zip's USB-Modules.bat filesystem_script.bat"
 tar -c -f BackUP's\local\%name% %files%
 
 pause

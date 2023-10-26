@@ -40,9 +40,9 @@ del Scripts\modules\modules-store
 curl --output update-file.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/update-file.bat --ssl-no-revoke
 start update-file.bat
 goto END
-end
+exit
 
 :rmodules
 del Scripts\modules\backup.bat
 goto END
-end
+exit

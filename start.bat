@@ -50,6 +50,8 @@ goto END
 exit
 
 :info
+cls
+@title Informations
 echo .
 echo Informations
 echo ===========================================================================

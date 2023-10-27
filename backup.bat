@@ -19,6 +19,7 @@ set /p basw="Triff eine Auswahl: "
 if %basw%==c goto lcbackup
 if %basw%==p goto pabackup
 if %basw%==r goto rcbackup
+if %basw%==m goto lclbackup
 if %basw%==g goto lwbackup
 if %basw%==gr goto rwbackup
 if %basw%==back goto END
@@ -46,6 +47,18 @@ tar -c -f BackUP's\local\%name% %files%
 pause
 goto backupmenue
 
+:lclbackup
+echo Beta!
+set /p name="Trage deinen Zusatz Namen ein: "
+set "name=LocalOrdner-%name%.zip"
+
+set ordner=0
+set /p ordner="Trage deinen Ordnerpfad mit dem Laufwerksbuchstaben ein: "
+
+set "files=%ordner%"
+tar -c -f BackUP's\remote\%name% "%files%"
+echo Fertig!
+goto backupmenue
 
 :rcbackup
 echo coming soon

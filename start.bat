@@ -53,6 +53,7 @@ exit
 
 :rmodules
 del Scripts\modules\backup.bat
+del apps\Start.exe
 goto END
 exit
 

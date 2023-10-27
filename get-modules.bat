@@ -40,7 +40,7 @@ goto getModules
 cls
 curl --output apps.zip https://cloud.systemcomb.de/s/YZxaPJ7j6YPaHEF/download/apps.zip --ssl-no-revoke
 tar -xf apps\apps.zip
-rm apps.zip
+del apps.zip
 pause 
 goto getModules
 

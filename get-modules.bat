@@ -2,11 +2,12 @@
 mkdir Scripts\modules
 cls
 
-@title GetModules
+@title GetModules.bat
 :getModules
+@title Module Marketplace
 cls
 echo.
-echo Treffe eine Auswahl
+echo Verfügbare Module:
 echo =================================
 echo.
 echo [B]BackUP - Modul

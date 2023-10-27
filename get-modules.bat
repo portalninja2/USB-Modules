@@ -39,6 +39,9 @@ goto getModules
 :programm 
 cls
 curl --output apps\apps.zip https://cloud.systemcomb.de/s/YZxaPJ7j6YPaHEF/download/apps.zip --ssl-no-revoke
+echo.
+echo #####################################################################################################################################
+echo Dateien werden entpackt bitte warten!
 cd apps
 tar -xf apps.zip
 del apps.zip

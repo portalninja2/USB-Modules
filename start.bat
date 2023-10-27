@@ -57,8 +57,7 @@ exit
 :rmodules
 del Scripts\modules\backup.bat
 del apps\Start.exe
-goto END
-exit
+goto remove
 
 :destroy
 @title Selfdestroy
@@ -98,12 +97,13 @@ del *
 
 :rmdatas
 @title RemoveModuleDatas
-del apps\Start.exe
-del apps\Documents
-del apps\PortableApps
-del BackUP's\local
-del BackUP's\remote
-mkdir BackUP's\local
+rmdir /s apps\PortableApps\
+rmdir /s apps\Documents\
+del apps\PortableApps\*
+del BackUP's\*
+del BackUP's\local\*
+del BackUP's\remote\*
+mkdir BackUP's\local\
 mkdir BackUP's\remote
 echo Fertig
 pause 
@@ -166,6 +166,7 @@ if %mentf%==app goto rmapps
 if %mentf%==backup goto rmbackups
 if %mentf%==back goto remove
 
+goto modulerd
 :moduler
 cls
 echo Module

@@ -40,9 +40,9 @@ goto backupmenue
 echo Beta!
 set name2=0
 set /p name2="Trage deinen Zusatz Namen ein: "
-set "name2=PortableApps-%name%.zip"
+set "name2=PortableApps-%name2%.zip"
 set "files=apps"
-tar -c -f BackUP's\local\%name% %files%
+tar -c -f BackUP's\local\%name2% %files%
 
 pause
 goto backupmenue

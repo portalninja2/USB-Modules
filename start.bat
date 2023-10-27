@@ -268,32 +268,33 @@ cls
 @title Version
 echo Current Version
 echo ==============================================================
-echo Version 1.2.14 -> Version added
+echo Version 1.2.15 - "Versions" bugfixes
 echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
-echo 1.2.13 -> Module Apps edited + remove menu added
-echo 1.2.12 Command destroy added
-echo 1.2.2-1.2.11 Bugfixes
-echo 1.2.1 -> Module BackUP's feature -> Folder added
-echo 1.2.0 -> Module Store added
+echo 1.2.14 - "Versions" added
+echo 1.2.13 - Module Apps edited + remove menu added
+echo 1.2.12 - Command destroy added
+echo 1.2.2-1.2.11 - Bugfixes
+echo 1.2.1 - Module BackUP's feature - Folder added
+echo 1.2.0 - Module Store added
 echo --------------------------------------------------------------
-echo 1.1.9 -> Bugfixes
-echo 1.1.8 -> Bugfixes
-echo 1.1.7 -> Bugfixes
-echo 1.1.6 -> BackUP added
-echo 1.1.5 -> "Updates" feature added
-echo 1.1.4 -> "info" added
-echo 1.1.2 -> Bugfixes
-echo 1.1.1 -> Bugfixes
-echo 1.1.0 -> New Menu
+echo 1.1.9 - Bugfixes
+echo 1.1.8 - Bugfixes
+echo 1.1.7 - Bugfixes
+echo 1.1.6 - BackUP added
+echo 1.1.5 - "Updates" feature added
+echo 1.1.4 - "info" added
+echo 1.1.2 - Bugfixes
+echo 1.1.1 - Bugfixes
+echo 1.1.0 - New Menu
 echo --------------------------------------------------------------
-echo 1.0.4 -> Idea with modules
-echo 1.0.3-1.0.7 -> Bugfixes
-echo 1.0.2 -> Features: Notes, Passwords, Ping added
-echo 1.0.1 -> Folder creating added
-echo 1.0.0 -> InstallScript
+echo 1.0.4 - Idea with modules
+echo 1.0.3-1.0.7 - Bugfixes
+echo 1.0.2 - Features: Notes, Passwords, Ping added
+echo 1.0.1 - Folder creating added
+echo 1.0.0 - InstallScript
 echo ##############################################################
 echo.
 echo created by Dennis B.

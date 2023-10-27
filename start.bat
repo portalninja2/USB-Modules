@@ -219,7 +219,6 @@ goto remove
 :info
 cls
 @title Informations
-echo .
 echo Informations
 echo ===========================================================================
 echo.
@@ -228,12 +227,17 @@ echo GitHub: https://github.com/portalninja2/
 echo Email: dennis@systemcomb.de
 echo Published Copys of this script are not allowed!
 echo.
+echo all Command are written on down letters!
+echo.
 echo ===========================================================================
 echo Hidden Commands:
 echo.
 echo [update] -- Will update the core features
 echo [rmodules] -- Will remove all Modules, can be installed without data loss
 echo [init] -- Will initialize the FileSystem
+echo [remove] -- To remove different Datas
+echo [version] -- To get Informations about the Version of the Software
+echo [info] -- for Informations
 echo.
 echo ===========================================================================
 pause

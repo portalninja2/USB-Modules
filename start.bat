@@ -288,7 +288,7 @@ echo 1.1.5 - "Updates" feature added
 echo 1.1.4 - "info" added
 echo 1.1.2 - Bugfixes
 echo 1.1.1 - Bugfixes
-echo 1.1.0 - New Menu
+echo 1.1.0 - New Menu / Modules added
 echo --------------------------------------------------------------
 echo 1.0.4 - Idea with modules
 echo 1.0.3-1.0.7 - Bugfixes

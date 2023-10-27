@@ -7,7 +7,7 @@ cls
 @title Module Marketplace
 cls
 echo.
-echo Verfügbare Module:
+echo Vorgefertigte Module:
 echo =================================
 echo.
 echo [B]BackUP - Modul

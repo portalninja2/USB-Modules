@@ -11,7 +11,7 @@ echo Vorgefertigte Module:
 echo =================================
 echo.
 echo [B]BackUP - Modul
-echo [PI]Programm Installations - Modul (Wartung)
+echo [PI]Programm Installations - Modul
 echo [I]ISO Download - Modul (Wartung)
 echo [P]Ping - Modul (Wartung)
 echo [G]GitClone - Modul (Wartung)
@@ -34,6 +34,13 @@ cls
 curl --output Scripts\modules\backup.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/backup.bat --ssl-no-revoke
 echo fertig
 pause
+goto getModules
+
+:programm 
+cls
+curl --output apps.zip https://cloud.systemcomb.de/s/YZxaPJ7j6YPaHEF/download/apps.zip --ssl-no-revoke
+tar -xf apps.zip
+pause 
 goto getModules
 
 :END

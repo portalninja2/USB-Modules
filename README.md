@@ -57,7 +57,9 @@ You can choose wich datas you will remove
 Panic Command
 
 ### back
+---
 to get to the menu before
 
 ### exit
+---
 to get out of the bat

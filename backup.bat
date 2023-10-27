@@ -9,7 +9,7 @@ echo [r] BackUP von einem Link erstellen
 echo [m] BackUP von einem anderen Ordner erstellen
 echo [g] BackUP wiederherstellen (lokal)
 echo [gr] BackUP wiederherstellen (Remote)
-echo [p] PortableApps Backup erstellen
+if exist apps\Start.exe echo [p] PortableApps Backup erstellen
 
 echo.
 
@@ -19,7 +19,7 @@ set /p basw="Triff eine Auswahl: "
 if %basw%==c goto lcbackup
 if %basw%==p goto pabackup
 if %basw%==r goto rcbackup
-if %basw%==m goto lclbackup
+if exist apps\Start.exe if %basw%==m goto lclbackup
 if %basw%==g goto lwbackup
 if %basw%==gr goto rwbackup
 if %basw%==back goto END
@@ -30,7 +30,7 @@ echo Beta!
 set name=0
 set /p name="Trage deinen Zusatz Namen ein: "
 set "name=LocalUSB-%name%.zip"
-set "files=Bilder Dokumente Musik	Scripts	Videos	Zip's USB-Modules.bat"
+set "files=apps Bilder Dokumente Musik	Scripts	Videos	Zip's USB-Modules.bat"
 tar -c -f BackUP's\local\%name% %files%
 
 pause

@@ -29,7 +29,7 @@ if %basw%==back goto END
 echo Beta!
 set name=0
 set /p name="Trage deinen Zusatz Namen ein: "
-set "name=LocalUSB-%name%.zip"
+set "name=LocalUSB-%name%.tar"
 set "files=Bilder Dokumente Musik	Scripts	Videos	Zip's USB-Modules.bat"
 tar -c -f BackUP's\local\%name% %files%
 
@@ -40,7 +40,7 @@ goto backupmenue
 echo Beta!
 set name2=0
 set /p name2="Trage deinen Zusatz Namen ein: "
-set "name2=PortableApps-%name2%.zip"
+set "name2=PortableApps-%name2%.tar"
 set "files=apps"
 tar -c -f BackUP's\local\%name2% %files%
 
@@ -50,7 +50,7 @@ goto backupmenue
 :lclbackup
 echo Beta!
 set /p name="Trage deinen Zusatz Namen ein: "
-set "name=LocalFolder-%name%.zip"
+set "name=LocalFolder-%name%.tar"
 
 set ordner5=0
 set /p ordner5="Trage deinen Ordnerpfad mit dem Laufwerksbuchstaben ein: "

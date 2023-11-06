@@ -239,6 +239,7 @@ echo [init] -- Will initialize the FileSystem
 echo [remove] -- To remove different Datas
 echo [version] -- To get Informations about the Version of the Software
 echo [info] -- for Informations
+echo [destroy] -- Panic Destroy the FileSystem
 echo.
 echo ===========================================================================
 pause
@@ -268,11 +269,13 @@ cls
 @title Version
 echo Current Version
 echo ==============================================================
-echo 1.3.0 new Module (programs pack_def) added 
+echo 1.3.1 Some fixes
 echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
+echo 1.3.0 new Module (programs pack_def) added 
+echo --------------------------------------------------------------
 echo Version 1.2.15 - "Versions" bugfixes
 echo 1.2.14 - "Versions" added
 echo 1.2.13 - Module Apps prep + remove menu added

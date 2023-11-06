@@ -29,7 +29,7 @@ if %asw%==rmdatas goto rmdatas
 if %asw%==remove goto remove
 if %asw%==version goto version
 
-goto end
+goto Auswahlmenue
 
 :getModules
 curl --output Scripts\modules\modules-store.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/get-modules.bat --ssl-no-revoke

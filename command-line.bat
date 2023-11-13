@@ -1,6 +1,6 @@
 @echo off
 @title Command Line
-
+cd Scripts\modules\
 :Command
 
 set asw=0

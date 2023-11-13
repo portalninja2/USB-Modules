@@ -50,6 +50,7 @@ cd ..
 
 :command-line
 cls
+curl --output Scripts\modules\back.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/back.bat --ssl-no-revoke
 curl --output Scripts\modules\command-line.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/command-line.bat --ssl-no-revoke
 echo fertig
 pause

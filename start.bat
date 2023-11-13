@@ -182,6 +182,7 @@ echo.
 echo [all] Alle Module entfernen
 if exist apps\Start.exe echo [app] removes the App Module
 if exist Scripts\modules\backup.bat echo [backup] remove BackUP Module
+if exist Scripts\modules\command-line.bat echo [command] remove Command-Line Module
 echo.
 
 set rmm=0
@@ -190,6 +191,7 @@ set /p rmm="Triff eine Auswahl: "
 if %rmm%==all goto rmodules
 if %rmm%==app goto rmmapp
 if %rmm%==backup goto rmmbackup
+if %rmm%==command goto rmmcommand
 if %rmm%==back goto remove
 
 goto moduler
@@ -222,6 +224,11 @@ goto remove
 :rmmbackup
 del Scripts\modules\backup.bat
 goto remove 
+
+:rmmcommand
+del Scripts\modules\command-line.bat
+del Scripts\modules\back.bat
+goto remove
 
 :info
 cls
@@ -280,8 +287,9 @@ echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
-echo 1.3.0 new Module (programs pack_def) added 
+echo 1.3.1 new Module (command-line) added
 echo --------------------------------------------------------------
+echo 1.3.0 new Module (programs pack_def) added 
 echo Version 1.2.15 - "Versions" bugfixes
 echo 1.2.14 - "Versions" added
 echo 1.2.13 - Module Apps prep + remove menu added

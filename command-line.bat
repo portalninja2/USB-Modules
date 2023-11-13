@@ -1,5 +1,6 @@
 @echo off
-@title Command Line
+@title command-line
+color 09
 cd Scripts\modules\
 :Command
 

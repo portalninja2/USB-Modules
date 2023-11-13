@@ -66,7 +66,10 @@ echo fertig
 pause
 goto getModules
 
-pause 
+:ping
+cls
+curl --output Scripts\modules\ping-module.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/ping.bat --ssl-no-revoke
+pause
 goto getModules
 
 :END

@@ -80,7 +80,7 @@ echo.
 echo [destroy] panic destroy
 echo.
 pause
-goto Auswahlmenu
+goto Auswahlmenue
 
 :END
 echo bye

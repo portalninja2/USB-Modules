@@ -14,6 +14,7 @@ if exist Scripts\modules\backup.bat echo [B]BackUP Manager
 if exist Scripts\modules\command-line.bat echo [C]command-line
 if exist apps\Start.exe echo [P]Programme
 if exist Scripts\modules\notes.bat echo [N]Notes
+if exist Scripts\modules\ping-modules.bat echo [PI]pings
 echo --------------------------------------
 echo System:
 echo.
@@ -39,6 +40,7 @@ if %asw%==rmdatas goto rmdatas
 if %asw%==remove goto remove
 if %asw%==version goto version
 if %asw%==help goto help
+if exist Scripts\modules\ping-module.bat %asw%==pi goto ping
 
 goto Auswahlmenue
 
@@ -61,6 +63,10 @@ goto END
 
 :command
 start Scripts\modules\command-line.bat
+goto END
+
+:ping
+start Scripts\modules\ping-module.bat
 goto END
 
 :help
@@ -216,6 +222,7 @@ echo [all] Alle Module entfernen
 if exist apps\Start.exe echo [app] removes the App Module
 if exist Scripts\modules\backup.bat echo [backup] remove BackUP Module
 if exist Scripts\modules\command-line.bat echo [command] remove Command-Line Module
+if exist Scripts\modules\ping-module.bat echo [ping] remove ping-module
 echo.
 
 set rmm=0
@@ -226,6 +233,7 @@ if %rmm%==app goto rmmapp
 if %rmm%==backup goto rmmbackup
 if %rmm%==command goto rmmcommand
 if %rmm%==back goto remove
+if %rmm%=ping goto rmmping
 
 goto moduler
 
@@ -261,6 +269,10 @@ goto remove
 :rmmcommand
 del Scripts\modules\command-line.bat
 del Scripts\modules\back.bat
+goto remove
+
+:rmmping
+del Scripts\modules\ping-module.bat
 goto remove
 
 :info
@@ -315,11 +327,12 @@ cls
 @title Version
 echo Current Version
 echo ==============================================================
-echo 1.3.4 improvments
+echo 1.3.5 Ping Module added
 echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
+echo 1.3.4 improvments
 echo 1.3.3 new Module (Notes) added
 echo 1.3.2 new Module (command-line) added
 echo 1.3.1 Some fixes

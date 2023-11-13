@@ -66,7 +66,7 @@ start Scripts\modules\command-line.bat
 goto END
 
 :ping
-start Scripts\modules\ping-module.bat
+start \Scripts\modules\ping-module.bat
 goto END
 
 :help

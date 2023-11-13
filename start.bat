@@ -4,12 +4,10 @@ mkdir Scripts\modules
 :Auswahlmenue
 @title USB-Stick-Menue
 cls
-echo.
+echo ======================================
 echo Wilkommen auf dem USB Stick
+echo ======================================
 echo.
-echo ======================================
-echo Treffe eine Auswahl
-echo ======================================
 echo Module: 
 echo.
 if exist Scripts\modules\backup.bat echo [B]BackUP Manager

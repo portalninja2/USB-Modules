@@ -67,17 +67,18 @@ goto END
 @title help
 cls
 echo Hilfe:
-echo ======================================
+echo =================================================
 echo System:
 echo.
 echo [back] goes back
 echo [version] get version and History
 echo [remove] Get a remove menu
 echo [info] Get info about the program
-echo --------------------------------------
+echo --------------------------------------------------
 echo Others
 echo.
 echo [destroy] panic destroy
+echo all command are written with lowercase letters
 echo.
 pause >nul
 goto Auswahlmenue

@@ -50,7 +50,8 @@ cd ..
 
 :command-line
 cls
-curl --output Scripts\modules\command-line.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/command-line.bat --ssl-no-revokeecho fertig
+curl --output Scripts\modules\command-line.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/command-line.bat --ssl-no-revoke
+echo fertig
 pause
 goto getModules
 

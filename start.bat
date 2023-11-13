@@ -67,7 +67,7 @@ goto END
 @title help
 cls
 echo Hilfe:
-echo =================================================
+echo ==================================================
 echo System:
 echo.
 echo [back] goes back

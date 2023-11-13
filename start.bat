@@ -13,13 +13,15 @@ echo ======================================
 echo Module: 
 echo.
 if exist Scripts\modules\backup.bat echo [B]BackUP Manager
-if exist Scripts\modules\command-line.bat echo [C]Command Line
+if exist Scripts\modules\command-line.bat echo [C]command-line
 if exist apps\Start.exe echo [P]Programme
 if exist Scripts\modules\notes.bat echo [N]Notes
 echo --------------------------------------
 echo System:
 echo.
 echo [g]Get Modules
+echo [help] Hilfe
+echo [exit] Bye
 echo --------------------------------------
 set asw=0
 set /p asw="Bitte eine Auswahl treffen: "
@@ -38,6 +40,7 @@ if %asw%==destroy goto destroy
 if %asw%==rmdatas goto rmdatas
 if %asw%==remove goto remove
 if %asw%==version goto version
+if %asw%==help goto help
 
 goto Auswahlmenue
 
@@ -62,6 +65,22 @@ goto END
 start Scripts\modules\command-line.bat
 goto END
 
+:help
+@title help
+cls
+echo Hilfe:
+echo ======================================
+echo System:
+echo.
+echo [back] goes back
+echo [version] get version and History
+echo [remove] Get a remove menu
+echo [info] Get info about the program
+echo --------------------------------------
+echo Others
+echo.
+echo [destroy] panic destroy
+echo.
 :END
 echo bye
 exit

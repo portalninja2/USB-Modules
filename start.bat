@@ -282,14 +282,14 @@ cls
 @title Version
 echo Current Version
 echo ==============================================================
-echo 1.3.1 Some fixes
+echo 1.3.2 new Module (command-line) added
 echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
-echo 1.3.1 new Module (command-line) added
-echo --------------------------------------------------------------
+echo 1.3.1 Some fixes
 echo 1.3.0 new Module (programs pack_def) added 
+echo --------------------------------------------------------------
 echo Version 1.2.15 - "Versions" bugfixes
 echo 1.2.14 - "Versions" added
 echo 1.2.13 - Module Apps prep + remove menu added

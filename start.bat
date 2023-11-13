@@ -79,7 +79,7 @@ echo Others
 echo.
 echo [destroy] panic destroy
 echo.
-pause
+pause >nul
 goto Auswahlmenue
 
 :END

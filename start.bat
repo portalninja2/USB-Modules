@@ -6,22 +6,21 @@ mkdir Scripts\modules
 cls
 echo.
 echo Wilkommen auf dem USB Stick
+echo.
 echo ======================================
 echo Treffe eine Auswahl
 echo ======================================
-echo.
-echo --------------------------------------
 echo Module: 
+echo.
 if exist Scripts\modules\backup.bat echo [B]BackUP Manager
 if exist Scripts\modules\command-line.bat echo [C]Command Line
 if exist apps\Start.exe echo [P]Programme
 if exist Scripts\modules\notes.bat echo [N]Notes
-echo.
 echo --------------------------------------
 echo System:
-echo [g]Get Modules
 echo.
-
+echo [g]Get Modules
+echo --------------------------------------
 set asw=0
 set /p asw="Bitte eine Auswahl treffen: "
 

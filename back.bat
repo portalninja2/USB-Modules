@@ -1,2 +1,2 @@
 USB-Modules.bat
-end
+exit

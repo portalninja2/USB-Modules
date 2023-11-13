@@ -29,6 +29,7 @@ if exist Scripts\modules\backup.bat if %asw%==b goto BackUP
 if exist Scripts\modules\command-line.bat if %asw%==c goto command
 if exist apps\Start.exe if %asw%==p goto portable
 if exist Scripts\modules\notes.bat if %asw%==n goto note
+if exist Scripts\modules\ping-module.bat if %asw%==pi goto ping
 if %asw%==g goto getModules
 if %asw%==exit goto END
 if %asw%==update goto update
@@ -40,7 +41,7 @@ if %asw%==rmdatas goto rmdatas
 if %asw%==remove goto remove
 if %asw%==version goto version
 if %asw%==help goto help
-if exist Scripts\modules\ping-module.bat %asw%==pi goto ping
+
 
 goto Auswahlmenue
 

@@ -223,7 +223,7 @@ echo [all] Alle Module entfernen
 if exist apps\Start.exe echo [app] removes the App Module
 if exist Scripts\modules\backup.bat echo [backup] remove BackUP Module
 if exist Scripts\modules\command-line.bat echo [command] remove Command-Line Module
-if exist Scripts\modules\ping-module.bat echo [pong] remove ping-module
+if exist Scripts\modules\ping-module.bat echo [ping] remove ping-module
 echo.
 
 set rmm=0
@@ -234,7 +234,7 @@ if %rmm%==app goto rmmapp
 if %rmm%==backup goto rmmbackup
 if %rmm%==command goto rmmcommand
 if %rmm%==back goto remove
-if %rmm%=pong goto rmmping
+if %rmm%==ping goto rmmping
 
 goto moduler
 

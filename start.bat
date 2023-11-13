@@ -5,13 +5,20 @@ mkdir Scripts\modules
 @title USB-Stick-Menue
 cls
 echo.
+echo Wilkommen auf dem USB Stick
+echo ======================================
 echo Treffe eine Auswahl
-echo =================================
+echo ======================================
 echo.
+echo --------------------------------------
+echo Module: 
 if exist Scripts\modules\backup.bat echo [B]BackUP Manager
 if exist Scripts\modules\command-line.bat echo [C]Command Line
 if exist apps\Start.exe echo [P]Programme
 if exist Scripts\modules\notes.bat echo [N]Notes
+echo.
+echo --------------------------------------
+echo System:
 echo [g]Get Modules
 echo.
 
@@ -288,11 +295,12 @@ cls
 @title Version
 echo Current Version
 echo ==============================================================
-echo 1.3.3 new Module (Notes) added
+echo 1.3.4 improvments
 echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
+echo 1.3.3 new Module (Notes) added
 echo 1.3.2 new Module (command-line) added
 echo 1.3.1 Some fixes
 echo 1.3.0 new Module (programs pack_def) added 

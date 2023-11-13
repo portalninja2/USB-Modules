@@ -9,6 +9,7 @@ echo Treffe eine Auswahl
 echo =================================
 echo.
 if exist Scripts\modules\backup.bat echo [B]BackUP Manager
+if exist Scripts\modules\command-line.bat echo [C]Command Line
 if exist apps\Start.exe echo [P]Programme
 echo [g]Get Modules
 echo.
@@ -17,6 +18,7 @@ set asw=0
 set /p asw="Bitte eine Auswahl treffen: "
 
 if exist Scripts\modules\backup.bat if %asw%==b goto BackUP
+if exist Scripts\modules\command-line.bat if %asw%==c goto command
 if exist apps\Start.exe if %asw%==p goto portable
 if %asw%==g goto getModules
 if %asw%==exit goto END
@@ -43,6 +45,10 @@ goto END
 :portable
 start apps\Start.exe
 goto Auswahlmenue
+
+:command
+start Scripts\modules\command-line.bat
+
 
 :END
 echo bye

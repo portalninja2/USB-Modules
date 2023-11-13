@@ -6,13 +6,6 @@
 set asw=0
 set /p asw="Gebe deinen Command ein: "
 
-if %asw%==back goto back
-else
-
-%asw% 
-goto Command
+%asw%
 pause
-
-:back
-USB-Modules.bat
-exit
+goto Command

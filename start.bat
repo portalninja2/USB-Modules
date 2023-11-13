@@ -14,7 +14,7 @@ if exist Scripts\modules\backup.bat echo [B]BackUP Manager
 if exist Scripts\modules\command-line.bat echo [C]command-line
 if exist apps\Start.exe echo [P]Programme
 if exist Scripts\modules\notes.bat echo [N]Notes
-if exist Scripts\modules\ping-modules.bat echo [PI]pings
+if exist Scripts\modules\ping-module.bat echo [PI]pings
 echo --------------------------------------
 echo System:
 echo.

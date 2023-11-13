@@ -79,6 +79,9 @@ echo Others
 echo.
 echo [destroy] panic destroy
 echo.
+pause
+goto Auswahlmenu
+
 :END
 echo bye
 exit

@@ -12,6 +12,7 @@ echo =================================
 echo.
 echo [B]BackUP - Modul
 echo [PI]Programm Installations - Modul
+echo [C]Command-Line - Modul
 echo [I]ISO Download - Modul (Wartung)
 echo [P]Ping - Modul (Wartung)
 echo [G]GitClone - Modul (Wartung)

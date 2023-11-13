@@ -19,7 +19,7 @@ set asw=0
 set /p asw="Bitte eine Auswahl treffen: "
 
 if exist Scripts\modules\backup.bat if %asw%==b goto BackUP
-if exist Scripts\modules\command-line.bat if %asw%==c goto command
+if exist Scripts\modules\command-line.bat if %asw%==n goto command
 if exist apps\Start.exe if %asw%==p goto portable
 if exist Scripts\modules\notes.bat if %asw%==c goto note
 if %asw%==g goto getModules

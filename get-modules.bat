@@ -15,7 +15,7 @@ echo [PI]Programm Installations - Modul
 echo [C]Command-Line - Modul
 echo [N]Notes - Modul
 echo [I]ISO Download - Modul (Wartung)
-echo [P]Ping - Modul (Wartung)
+echo [P]Ping - Modul
 echo [G]GitClone - Modul (Wartung)
 echo [S]Shutdown - Modul (Wartung)
 echo.

@@ -27,6 +27,7 @@ if %mdasw%==i goto ISO
 if %mdasw%==p goto ping
 if %mdasw%==g goto gitclone 
 if %mdasw%==s goto shutdown 
+if %mdasw%==c goto command-line
 if %mdasw%==back goto :END
 
 :BackUP
@@ -46,6 +47,12 @@ cd apps
 tar -xf apps.zip
 del apps.zip
 cd ..
+
+:command-line
+cls
+curl --output Scripts\modules\command-line.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/command-line.bat --ssl-no-revokeecho fertig
+pause
+goto getModules
 
 pause 
 goto getModules

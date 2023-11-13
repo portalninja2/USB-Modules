@@ -13,6 +13,7 @@ echo.
 echo [B]BackUP - Modul
 echo [PI]Programm Installations - Modul
 echo [C]Command-Line - Modul
+echo [N]Notes - Modul
 echo [I]ISO Download - Modul (Wartung)
 echo [P]Ping - Modul (Wartung)
 echo [G]GitClone - Modul (Wartung)
@@ -29,6 +30,7 @@ if %mdasw%==p goto ping
 if %mdasw%==g goto gitclone 
 if %mdasw%==s goto shutdown 
 if %mdasw%==c goto command-line
+if %mdasw%==n goto notes
 if %mdasw%==back goto :END
 
 :BackUP
@@ -53,6 +55,13 @@ cd ..
 cls
 curl --output Scripts\modules\back.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/back.bat --ssl-no-revoke
 curl --output Scripts\modules\command-line.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/command-line.bat --ssl-no-revoke
+echo fertig
+pause
+goto getModules
+
+:notes
+cls
+curl --output Scripts\modules\notes.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/notes.bat --ssl-no-revoke
 echo fertig
 pause
 goto getModules

@@ -232,7 +232,7 @@ set /p rmm="Triff eine Auswahl: "
 if %rmm%==all goto rmodules
 if %rmm%==app goto rmmapp
 if %rmm%==backup goto rmmbackup
-if %rmm%==command goto rmmcommand
+if %rmm%==command goto rmcommand
 if %rmm%==back goto remove
 if %rmm%==ping goto rmmping
 
@@ -267,7 +267,7 @@ goto remove
 del Scripts\modules\backup.bat
 goto remove 
 
-:rmmcommand
+:rmcommand
 del Scripts\modules\command-line.bat
 del Scripts\modules\back.bat
 goto remove

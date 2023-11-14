@@ -23,17 +23,26 @@ if %asw%==d goto remove
 if %asw%==back goto end
 
 :create
+echo.
 set title=Titel
 set /p title="Setze deinen Titel: "
+
+echo -------------------------------------
 
 set note=Keine-Bemerkung
 set /p note="Setze eine Bemerkung (optional): "
 
+echo -------------------------------------
+
 set duration=Kein-Zeitziel
 set /p duration="Bis wann muss es erledigt sein (optional): "
 
+echo -------------------------------------
+
 set username=unknown
 set /p username="Angelegt von: (optional): "
+
+echo -------------------------------------
 
 set YYYY=%date:~-4%
 set MM=%date:~-7,2%
@@ -49,12 +58,12 @@ echo. >> Scripts\modules\datas\"%title%".tsk
 echo Aufgabe: %title% >> Scripts\modules\datas\"%title%".tsk
 echo Bemerkung: %note% >> Scripts\modules\datas\"%title%".tsk
 echo Bis: %duration% >> Scripts\modules\datas\"%title%".tsk
-echo ---- >> Scripts\modules\datas\"%title%".tsk
+echo. >> Scripts\modules\datas\"%title%".tsk
 echo System: >> Scripts\modules\datas\"%title%".tsk
+echo -------- >> Scripts\modules\datas\"%title%".tsk
 echo Erstellt am: %DD%-%MM%-%YYYY%>> Scripts\modules\datas\"%title%".tsk
 echo um: %hr%:%min%:%sek% Uhr >> Scripts\modules\datas\"%title%".tsk
-echo. >> Scripts\modules\datas\"%title%".tsk
-echo von: %username% >> Scripts\modules\datas\"%title%".tsk
+echo Erstellt von: %username% >> Scripts\modules\datas\"%title%".tsk
 echo. >> Scripts\modules\datas\"%title%".tsk
 
 goto menu
@@ -63,15 +72,21 @@ goto menu
 if exist "\Scripts\modules\datas\*.tsk" (goto anyways) else (goto notasks)
 
 :anyways
+cls
 for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\*.tsk" "\Scripts\modules\datas\*.date"') do @echo %%~ni>>"Scripts\modules\datas\tasks.tsks"
+echo Aufgaben: 
+echo ###################################################
+echo.
 type Scripts\modules\datas\tasks.tsks
-pause
+echo.
+echo ---------------------------------------------------
 del Scripts\modules\datas\tasks.tsks
 
 set show=back
 set /p show="Zu welchem brauchst du Details: "
+cls
 
-type Scripts\modules\datas\"%show%".tsk
+if exist Scripts\modules\datas\"%show%".tsk (type Scripts\modules\datas\"%show%".tsk) else (goto no)
 echo.
 pause
 
@@ -84,10 +99,22 @@ echo Super, du hast keine Aufgaben
 timeout 3
 goto menu
 
+:no
+cls
+echo.
+echo Diese Aufgabe existiert nicht!
+echo.
+timeout 3
+goto menu
+
 :remove
+echo.
 set rm=back
 set /p rm="Welche Aufgabe ist erledigt: "
 
+if exist Scripts\modules\datas\"%rm%".tsk (goto p3) else (goto no)
+
+:p3
 del Scripts\modules\datas\"%rm%".tsk
 
 goto menu

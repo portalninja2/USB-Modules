@@ -35,6 +35,8 @@ if %mdasw%==c goto command-line
 if %mdasw%==n goto notes
 if %mdasw%==back goto :END
 
+goto getModules
+
 :BackUP
 cls
 curl --output Scripts\modules\backup.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/backup.bat --ssl-no-revoke

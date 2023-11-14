@@ -71,7 +71,7 @@ del Scripts\modules\datas\tasks.tsks
 set show=back
 set /p show="Zu welchem brauchst du Details: "
 
-type Scripts\modules\datas\%show%.tsk
+type Scripts\modules\datas\"%show%".tsk
 echo.
 pause
 
@@ -88,7 +88,7 @@ goto menu
 set rm=back
 set /p rm="Welche Aufgabe ist erledigt: "
 
-del Scripts\modules\datas\%rm%.tsk
+del Scripts\modules\datas\"%rm%".tsk
 
 goto menu
 

@@ -19,6 +19,8 @@ echo [P]Ping - Modul
 echo [G]GitClone - Modul (Wartung)
 echo [S]Shutdown - Modul (Wartung)
 echo.
+echo [CUSTOM] get a Custom Module (Wartung)
+echo.
 
 set mdasw=0
 set /p mdasw="Bitte treffe eine Auswahl: "

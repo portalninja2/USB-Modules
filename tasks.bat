@@ -2,6 +2,7 @@
 @title Aufgaben
 
 if exist Scripts\modules\datas (goto menu) else (mkdir Scripts\modules\datas\)
+if exist Scripts\modules\datas\un (goto menu) else (mkdir Scripts\modules\datas\un)
 
 :menu
 cls
@@ -11,6 +12,7 @@ echo ==================================================
 echo.
 echo [C]Aufgabe anlegen
 echo [A]Aufgaben ansehen
+echo [F]Aufgabe als erledigt makieren
 echo [D]Aufgabe entfernen
 echo.
 
@@ -19,6 +21,7 @@ set /p asw="Treffe eine Auswahl: "
 
 if %asw%==c goto create
 if %asw%==a goto show
+if %asw%==f goto finish
 if %asw%==d goto remove
 if %asw%==back goto end
 
@@ -53,44 +56,59 @@ set min=%time:~3,2%
 set sek=%time:~6,2%
 
 
-echo ################################################################## >> Scripts\modules\datas\"%title%".tsk
-echo. >> Scripts\modules\datas\"%title%".tsk
-echo Aufgabe: %title% >> Scripts\modules\datas\"%title%".tsk
-echo Bemerkung: %note% >> Scripts\modules\datas\"%title%".tsk
-echo Bis: %duration% >> Scripts\modules\datas\"%title%".tsk
-echo. >> Scripts\modules\datas\"%title%".tsk
-echo System: >> Scripts\modules\datas\"%title%".tsk
-echo -------- >> Scripts\modules\datas\"%title%".tsk
-echo Erstellt am: %DD%-%MM%-%YYYY%>> Scripts\modules\datas\"%title%".tsk
-echo um: %hr%:%min%:%sek% Uhr >> Scripts\modules\datas\"%title%".tsk
-echo Erstellt von: %username% >> Scripts\modules\datas\"%title%".tsk
-echo. >> Scripts\modules\datas\"%title%".tsk
+echo ################################################################## >> Scripts\modules\datas\un\"%title%".tsk
+echo. >> Scripts\modules\datas\un\"%title%".tsk
+echo Aufgabe: %title% >> Scripts\modules\datas\un\"%title%".tsk
+echo Bemerkung: %note% >> Scripts\modules\datas\un\"%title%".tsk
+echo Bis: %duration% >> Scripts\modules\datas\un\"%title%".tsk
+echo. >> Scripts\modules\datas\un\"%title%".tsk
+echo System: >> Scripts\modules\datas\un\"%title%".tsk
+echo -------- >> Scripts\modules\datas\un\"%title%".tsk
+echo Erstellt am: %DD%-%MM%-%YYYY% >> Scripts\modules\datas\un\"%title%".tsk
+echo um: %hr%:%min%:%sek% Uhr >> Scripts\modules\datas\un\"%title%".tsk
+echo Erstellt von: %username% >> Scripts\modules\datas\un\"%title%".tsk
+echo. >> Scripts\modules\datas\un\"%title%".tsk
 
 goto menu
 
 :show
-if exist "\Scripts\modules\datas\*.tsk" (goto anyways) else (goto notasks)
+if exist "\Scripts\modules\datas\un\*.tsk" (goto anyways) else (goto final)
 
 :anyways
 cls
-for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\*.tsk" "\Scripts\modules\datas\*.date"') do @echo %%~ni>>"Scripts\modules\datas\tasks.tsks"
-echo Aufgaben: 
+for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\un\*.tsk" "\Scripts\modules\datas\un\*.date"') do @echo %%~ni>>"Scripts\modules\datas\un\tasks.tsks"
+echo Unerledigt: 
 echo ###################################################
 echo.
-type Scripts\modules\datas\tasks.tsks
+type Scripts\modules\datas\un\tasks.tsks
+echo.
+echo.
+del Scripts\modules\datas\un\tasks.tsks
+
+if exist "\Scripts\modules\datas\erledigt\*.tsk" (goto final) else (goto dialog)
+
+:final
+for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\erledigt\*.tsk" "\Scripts\modules\datas\erledigt\*.date"') do @echo %%~ni>>"Scripts\modules\datas\erledigt\tasks.tsks"
+echo.
+echo Erledigt: 
+echo ###################################################
+echo.
+type Scripts\modules\datas\erledigt\tasks.tsks
 echo.
 echo ---------------------------------------------------
-del Scripts\modules\datas\tasks.tsks
+del Scripts\modules\datas\erledigt\tasks.tsks
 
+:dialog
 set show=back
-set /p show="Zu welchem brauchst du Details: "
+set /p show="Zu welchem brauchst du Details (unerledigt): "
 cls
 
-if exist Scripts\modules\datas\"%show%".tsk (type Scripts\modules\datas\"%show%".tsk) else (goto no)
+if exist Scripts\modules\datas\un\"%show%".tsk (type Scripts\modules\datas\un\"%show%".tsk) else (goto no)
 echo.
 pause
 
 goto menu
+
 
 :notasks
 echo.
@@ -107,15 +125,32 @@ echo.
 timeout 3
 goto menu
 
-:remove
+:finish
+if exist Scripts\modules\datas\erledigt (goto finish1) else (mkdir Scripts\modules\datas\erledigt)
+
+:finish1
 echo.
 set rm=back
 set /p rm="Welche Aufgabe ist erledigt: "
 
-if exist Scripts\modules\datas\"%rm%".tsk (goto p3) else (goto no)
+if exist Scripts\modules\datas\un\"%rm%".tsk (goto p3) else (goto no)
 
 :p3
-del Scripts\modules\datas\"%rm%".tsk
+move Scripts\modules\datas\un\"%rm%".tsk Scripts\modules\datas\erledigt\"%rm%".tsk
+del Scripts\modules\datas\un\"%rm%".tsk
+
+goto menu
+
+:remove
+echo.
+set rm=back
+set /p rm="Welche Aufgabe soll entfernt werden: "
+
+if exist Scripts\modules\datas\un\"%rm%".tsk or Scripts\modules\datas\un\"%rm%".tsk (goto p4) else (goto no)
+
+:p4
+del Scripts\modules\datas\un\"%rm%".tsk
+del Scripts\modules\datas\erledigt\"%rm%".tsk
 
 goto menu
 

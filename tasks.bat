@@ -13,6 +13,7 @@ echo.
 echo [C]Aufgabe anlegen
 echo [A]Aufgaben ansehen
 echo [F]Aufgabe als erledigt makieren
+echo [U]Aufgabe als unerledigt makieren
 echo [D]Aufgabe entfernen
 echo.
 
@@ -23,6 +24,7 @@ if %asw%==c goto create
 if %asw%==a goto show
 if %asw%==f goto finish
 if %asw%==d goto remove
+if %asw%==u goto unerledigt
 if %asw%==back goto end
 
 :create
@@ -82,7 +84,6 @@ echo ###################################################
 echo.
 type Scripts\modules\datas\un\tasks.tsks
 echo.
-echo.
 del Scripts\modules\datas\un\tasks.tsks
 
 if exist "\Scripts\modules\datas\erledigt\*.tsk" (goto final) else (goto dialog)
@@ -130,16 +131,30 @@ if exist Scripts\modules\datas\erledigt (goto finish1) else (mkdir Scripts\modul
 
 :finish1
 echo.
-set rm=back
-set /p rm="Welche Aufgabe ist erledigt: "
+set fi=back
+set /p fi="Welche Aufgabe ist erledigt: "
 
-if exist Scripts\modules\datas\un\"%rm%".tsk (goto p3) else (goto no)
+if exist Scripts\modules\datas\un\"%fi%".tsk (goto p3) else (goto no)
 
 :p3
-move Scripts\modules\datas\un\"%rm%".tsk Scripts\modules\datas\erledigt\"%rm%".tsk
-del Scripts\modules\datas\un\"%rm%".tsk
+move Scripts\modules\datas\un\"%fi%".tsk Scripts\modules\datas\erledigt\"%fi%".tsk
+del Scripts\modules\datas\un\"%fi%".tsk
 
 goto menu
+
+:unerledigt
+set un=back
+set /p un="Welche Aufgabe ist unerledigt: "
+
+if exist Scripts\modules\datas\erledigt\"%un%".tsk (goto un1) else (goto no)
+
+:un1
+move Scripts\modules\datas\erledigt\"%un%".tsk Scripts\modules\datas\un\"%un%".tsk
+del Scripts\modules\datas\erledigt\"%un%".tsk
+
+goto menu
+
+echo.
 
 :remove
 echo.

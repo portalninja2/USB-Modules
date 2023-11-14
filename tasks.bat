@@ -1,7 +1,7 @@
 @echo off
 @title Aufgaben
 
-if exist Scripts\modules\datas ("goto menu") else ("mkdir Scripts\modules\datas\")
+if exist Scripts\modules\datas (goto menu) else (mkdir Scripts\modules\datas\)
 
 :menu
 cls
@@ -60,6 +60,9 @@ echo. >> Scripts\modules\datas\"%title%".tsk
 goto menu
 
 :show
+if exist "\Scripts\modules\datas\*.tsk" (goto anyways) else (goto notasks)
+
+:anyways
 for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\*.tsk" "\Scripts\modules\datas\*.date"') do @echo %%~ni>>"Scripts\modules\datas\tasks.tsks"
 type Scripts\modules\datas\tasks.tsks
 pause
@@ -72,6 +75,13 @@ type Scripts\modules\datas\%show%.tsk
 echo.
 pause
 
+goto menu
+
+:notasks
+echo.
+echo ###################################
+echo Super, du hast keine Aufgaben
+timeout 3
 goto menu
 
 :remove

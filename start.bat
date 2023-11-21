@@ -16,6 +16,8 @@ if exist apps\Start.exe echo [P]Programme
 if exist Scripts\modules\notes.bat echo [N]Notes
 if exist Scripts\modules\tasks.bat echo [T]Aufgaben
 if exist Scripts\modules\ping-module.bat echo [PI]pings
+if exist Scripts\modules\web-modul.bat echo [W]Webseiten
+if exist Scripts\modules\telefonbuch.bat echo [K]Telefonbuch
 echo --------------------------------------
 echo.
 echo System:
@@ -33,6 +35,8 @@ if exist apps\Start.exe if %asw%==p goto portable
 if exist Scripts\modules\notes.bat if %asw%==n goto note
 if exist Scripts\modules\ping-module.bat if %asw%==pi goto ping
 if exist Scripts\modules\tasks.bat if %asw%==t goto tasks
+if exist Scripts\modules\web-modul.bat if %asw%==w goto web
+if exist Scripts\modules\telefonbuch.bat if %asw%==k goto tel
 if %asw%==g goto getModules
 if %asw%==exit goto END
 if %asw%==update goto update
@@ -75,6 +79,14 @@ goto END
 
 :tasks
 start \Scripts\modules\tasks.bat
+goto END
+
+:web
+start \Scripts\modules\web-modul.bat
+goto END
+
+:tel
+start \Scripts\modules\telefonbuch.bat
 goto END
 
 :help
@@ -335,11 +347,12 @@ cls
 @title Version
 echo Current Version
 echo ==============================================================
-echo 1.3.6 Task Module added
+echo 1.3.8 Two new Modules (Beta) where added
 echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
+echo 1.3.6 Task Module added
 echo 1.3.5 Ping Module added
 echo 1.3.4 improvments
 echo 1.3.3 new Module (Notes) added

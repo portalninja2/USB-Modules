@@ -6,6 +6,8 @@
 curl --output standard_filesystem.bat https://raw.githubusercontent.com/portalninja2/filesystem-setup/main/standard_filesystem.bat --ssl-no-revoke
 start standard_filesystem.bat
 
+**Important: After Installation you have to run "init"**
+
 ### Setup the installation Script
 ---
 -> Folders are created by default

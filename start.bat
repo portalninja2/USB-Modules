@@ -601,6 +601,12 @@ mkdir Scripts\fertig
 mkdir Scripts\neu
 mkdir BackUP's\local
 mkdir BackUP's\remote
+mkdir Scripts\modules\datas\erledigt
+mkdir Scripts\modules\datas\panic
+mkdir Scripts\modules\datas\shortcuts
+mkdir Scripts\modules\datas\tel
+mkdir Scripts\modules\datas\un
+mkdir Scripts\modules\datas\web
 pause
 goto Auswahlmenue
 

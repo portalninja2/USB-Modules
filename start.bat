@@ -933,4 +933,5 @@ pause >nul
 goto Auswahlmenue
 
 :settings-download
-https://raw.githubusercontent.com/portalninja2/USB-Modules/main/settings.bat
+curl --output Scripts\modules\settings.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/settings.bat --ssl-no-revoke
+exit

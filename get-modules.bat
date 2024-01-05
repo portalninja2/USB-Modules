@@ -96,7 +96,7 @@ goto getModules
 
 :web-modul
 cls
-curl --output Scripts\modules\web-mobul.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/web-modul.bat --ssl-no-revoke
+curl --output Scripts\modules\web-modul.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/web-modul.bat --ssl-no-revoke
 pause
 goto getModules
 

@@ -18,6 +18,7 @@ echo [I]ISO Download - Modul (Wartung)
 echo [P]Ping - Modul
 echo [G]GitClone - Modul (Wartung)
 echo [S]Shutdown - Modul (Wartung)
+echo [T]Task - Modul
 echo.
 echo [CUSTOM] get a Custom Module (Wartung)
 echo.
@@ -33,7 +34,8 @@ if %mdasw%==g goto gitclone
 if %mdasw%==s goto shutdown 
 if %mdasw%==c goto command-line
 if %mdasw%==n goto notes
-if %mdasw%==back goto :END
+if %mdasw%==t goto tasks
+if %mdasw%==back goto END
 
 goto getModules
 
@@ -73,6 +75,12 @@ goto getModules
 :ping
 cls
 curl --output Scripts\modules\ping-module.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/ping.bat --ssl-no-revoke
+pause
+goto getModules
+
+:tasks
+cls
+curl --output Scripts\modules\tasks.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/tasks.bat --ssl-no-revoke
 pause
 goto getModules
 

@@ -71,7 +71,7 @@ if exist Scripts\modules\shortcuts-open.bat if %asw%==s goto so
 if exist Scripts\modules\shortcuts.bat if %asw%==set-shortcut goto ss
 if %asw%==g goto getModules
 if %asw%==exit goto END
-if %asw%==update goto bruch
+if %asw%==update goto update
 if %asw%==rmodules goto rmodules
 if %asw%==info goto info
 if %asw%==init goto init

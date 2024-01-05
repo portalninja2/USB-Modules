@@ -1,3 +1,4 @@
+if doesnt exist Scripts\modules\settings.bat goto settings-download
 del update-file.bat
 mkdir Scripts\modules
 @echo off
@@ -930,3 +931,6 @@ echo Copys of these Scripts are not allowed
 echo.
 pause >nul
 goto Auswahlmenue
+
+:settings-download
+https://raw.githubusercontent.com/portalninja2/USB-Modules/main/settings.bat

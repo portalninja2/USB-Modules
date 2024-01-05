@@ -116,27 +116,27 @@ start Scripts\modules\command-line.bat
 goto END
 
 :ping
-start \Scripts\modules\ping-module.bat
+start Scripts\modules\ping-module.bat
 goto END
 
 :tasks
-start \Scripts\modules\tasks.bat
+start Scripts\modules\tasks.bat
 goto END
 
 :web
-start \Scripts\modules\web-modul.bat
+start Scripts\modules\web-modul.bat
 goto END
 
 :tel
-start \Scripts\modules\telefonbuch.bat
+start Scripts\modules\telefonbuch.bat
 goto END
 
 :so
-start \Scripts\modules\shortcuts-open.bat
+start Scripts\modules\shortcuts-open.bat
 goto END
 
 :ss
-start \Scripts\modules\shortcuts.bat
+start Scripts\modules\shortcuts.bat
 goto END
 
 :lock

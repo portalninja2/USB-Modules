@@ -5,6 +5,8 @@ del update-file.bat
 mkdir Scripts\modules
 @echo off
 :Auswahlmenue
+SET /p colors=<Scripts\modules\Color.txt
+color %colors%
 @title USB-Stick-Menue
 cls
 echo ======================================
@@ -21,15 +23,29 @@ if exist Scripts\modules\tasks.bat echo [T]Aufgaben
 if exist Scripts\modules\ping-module.bat echo [PI]pings
 if exist Scripts\modules\web-modul.bat echo [W]Webseiten
 if exist Scripts\modules\telefonbuch.bat echo [K]Telefonbuch
+if exist Scripts\modules\shortcuts-open.bat echo [S]Shortcuts
+SET /p menu=<Scripts\modules\1.txt
 echo --------------------------------------
-echo.
-echo System:
-echo.
-echo [g]Get Modules
-echo [help] Hilfe
-echo [exit] Bye
-echo --------------------------------------
-set asw=0
+
+if %menu%==0 echo.
+if %menu%==0 echo System
+if %menu%==0 echo.
+if %menu%==0 echo [g]Get Modules
+if %menu%==0 echo [help] Hilfe
+if %menu%==0 echo [exit] Bye
+if %menu%==0 echo --------------------------------------
+if %menu%==0 echo.
+
+if %menu%==2 echo.
+if %menu%==2 echo Settings
+if %menu%==2 echo.
+if %menu%==2 echo [set-color] Default Color
+if %menu%==2 echo [set-panic] Apps to be closed in Panic
+if %menu%==2 echo [set-standard] Set the enter Shortcut
+if %menu%==2 echo [set-menu] set your Downbar
+if %menu%==2 echo --------------------------------------
+if %menu%==2 echo.
+SET /p asw=<Scripts\modules\standard.txt
 set /p asw="Bitte eine Auswahl treffen: "
 
 if exist Scripts\modules\backup.bat if %asw%==b goto BackUP
@@ -40,9 +56,11 @@ if exist Scripts\modules\ping-module.bat if %asw%==pi goto ping
 if exist Scripts\modules\tasks.bat if %asw%==t goto tasks
 if exist Scripts\modules\web-modul.bat if %asw%==w goto web
 if exist Scripts\modules\telefonbuch.bat if %asw%==k goto tel
+if exist Scripts\modules\shortcuts-open.bat if %asw%==s goto so 
+if exist Scripts\modules\shortcuts-open.bat if %asw%==set-shortcut goto ss
 if %asw%==g goto getModules
 if %asw%==exit goto END
-if %asw%==update goto update
+if %asw%==update goto bruch
 if %asw%==rmodules goto rmodules
 if %asw%==info goto info
 if %asw%==init goto init
@@ -51,7 +69,14 @@ if %asw%==rmdatas goto rmdatas
 if %asw%==remove goto remove
 if %asw%==version goto version
 if %asw%==help goto help
-
+if %asw%==set-color goto settings
+if %asw%==set-standard goto standard
+if %asw%==ex start explorer
+if %asw%==lock goto lock
+if %asw%==log goto log
+if %asw%==panic goto panic
+if %asw%==set-panic goto set-panic
+if %asw%==set-menu goto set-menu
 
 goto Auswahlmenue
 
@@ -138,68 +163,6 @@ echo geoeffnet am: %DD%.%MM%.%YYYY%>>Scripts\modules\datas\logs.txt
 echo geoffnet um: %hr%:%min%:%sek%>>Scripts\modules\datas\logs.txt
 echo geoffnet von: %userprofile%>>Scripts\modules\datas\logs.txt
 echo.
-:Auswahlmenue
-SET /p colors=<Scripts\modules\Color.txt
-color %colors%
-@title USB-Stick-Menue
-cls
-echo ======================================
-echo Wilkommen auf dem USB Stick
-echo ======================================
-echo.
-echo Module: 
-echo.
-if exist Scripts\modules\backup.bat echo [B]BackUP Manager
-if exist Scripts\modules\command-line.bat echo [C]command-line
-if exist apps\Start.exe echo [P]Programme
-if exist Scripts\modules\notes.bat echo [N]Notes
-if exist Scripts\modules\tasks.bat echo [T]Aufgaben
-if exist Scripts\modules\ping-module.bat echo [PI]pings
-if exist Scripts\modules\web-modul.bat echo [W]Webseiten
-if exist Scripts\modules\telefonbuch.bat echo [K]Telefonbuch
-if exist Scripts\modules\shortcuts-open.bat echo [S]Shortcuts
-echo --------------------------------------
-echo.
-echo System:
-echo.
-echo [g]Get Modules
-echo [help] Hilfe
-echo [exit] Bye
-echo --------------------------------------
-SET /p asw=<Scripts\modules\standard.txt
-set /p asw="Bitte eine Auswahl treffen: "
-
-if exist Scripts\modules\backup.bat if %asw%==b goto BackUP
-if exist Scripts\modules\command-line.bat if %asw%==c goto command
-if exist apps\Start.exe if %asw%==p goto portable
-if exist Scripts\modules\notes.bat if %asw%==n goto note
-if exist Scripts\modules\ping-module.bat if %asw%==pi goto ping
-if exist Scripts\modules\tasks.bat if %asw%==t goto tasks
-if exist Scripts\modules\web-modul.bat if %asw%==w goto web
-if exist Scripts\modules\telefonbuch.bat if %asw%==k goto tel
-if exist Scripts\modules\shortcuts-open.bat if %asw%==s goto so 
-if exist Scripts\modules\shortcuts-open.bat if %asw%==set-shortcut goto ss
-if %asw%==g goto getModules
-if %asw%==exit goto END
-if %asw%==update goto bruch
-if %asw%==rmodules goto rmodules
-if %asw%==info goto info
-if %asw%==init goto init
-if %asw%==destroy goto destroy
-if %asw%==rmdatas goto rmdatas
-if %asw%==remove goto remove
-if %asw%==version goto version
-if %asw%==help goto help
-if %asw%==set-color goto settings
-if %asw%==set-standard goto standard
-if %asw%==ex start explorer
-if %asw%==lock goto lock
-if %asw%==log goto log
-if %asw%==panic goto panic
-if %asw%==set-panic goto set-panic
-
-
-goto Auswahlmenue
 
 :getModules
 curl --output Scripts\modules\modules-store.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/get-modules.bat --ssl-no-revoke

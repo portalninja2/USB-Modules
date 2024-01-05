@@ -518,11 +518,14 @@ cls
 @title Version
 echo Current Version
 echo ==============================================================
-echo 1.3.8 Two new Modules (Beta) where added
+echo 1.4.3 Lot of Bug Fixes
 echo ==============================================================
 echo.
 echo Last Versions:
 echo ##############################################################
+echo 1.4.1 Setup Script changed
+echo 1.4.0 Major (More Modules, more stuff)
+echo 1.3.8 Two new Modules (Beta) where added
 echo 1.3.6 Task Module added
 echo 1.3.5 Ping Module added
 echo 1.3.4 improvments

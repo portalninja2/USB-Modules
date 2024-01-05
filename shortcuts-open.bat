@@ -4,7 +4,7 @@
 SET /p colors=<Scripts\modules\Color.txt
 color %colors%
 cls
-for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\shortcuts\*.bat"') do @echo %%~ni>>"Scripts\modules\datas\shortcuts\short.cut"
+for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\shortcuts\*.bat"') do @echo %%~ni>>"Scripts\modules\datas\shortcuts\short.cut"
 echo Shortcuts:
 echo ============================================
 echo.

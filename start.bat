@@ -1,4 +1,5 @@
 curl --output Scripts\modules\settings.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/settings.bat --ssl-no-revoke
+curl --output Scripts\modules\shortcut-open.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/shortcuts-open.bat --ssl-no-revoke
 del update-file.bat
 mkdir Scripts\modules
 @echo off

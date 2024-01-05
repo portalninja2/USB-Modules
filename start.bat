@@ -192,9 +192,7 @@ if %asw%==set-color goto settings
 if %asw%==set-standard goto standard
 if %asw%==ex start explorer
 if %asw%==lock goto lock
-if %asw%==folder goto folder
 if %asw%==log goto log
-if %asw%==folder-log goto flog
 if %asw%==panic goto panic
 if %asw%==set-panic goto set-panic
 

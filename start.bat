@@ -505,6 +505,13 @@ mkdir Zip's
 mkdir apps
 mkdir Scripts\vorgefertigt
 mkdir Scripts\modules
+mkdir Scripts\modules\datas
+mkdir Scripts\modules\datas\erledigt
+mkdir Scripts\modules\datas\panic
+mkdir Scripts\modules\datas\shortcuts
+mkdir Scripts\modules\datas\tel
+mkdir Scripts\modules\datas\un
+mkdir Scripts\modules\datas\web
 mkdir Scripts\bearbeitung
 mkdir Scripts\fertig
 mkdir Scripts\neu

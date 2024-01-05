@@ -5,6 +5,8 @@ if exist Scripts\modules\datas (goto menu) else (mkdir Scripts\modules\datas\)
 if exist Scripts\modules\datas\un (goto menu) else (mkdir Scripts\modules\datas\un)
 
 :menu
+SET /p colors=<Scripts\modules\Color.txt
+color %colors%
 cls
 echo.
 echo Aufgaben
@@ -161,7 +163,7 @@ echo.
 set rm=back
 set /p rm="Welche Aufgabe soll entfernt werden: "
 
-if exist Scripts\modules\datas\un\"%rm%".tsk or Scripts\modules\datas\un\"%rm%".tsk (goto p4) else (goto no)
+if exist Scripts\modules\datas\un\"%rm%".tsk or Scripts\modules\datas\erledigt\"%rm%".tsk (goto p4) else (goto no)
 
 :p4
 del Scripts\modules\datas\un\"%rm%".tsk

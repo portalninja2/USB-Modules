@@ -20,6 +20,7 @@ echo [G]GitClone - Modul (Wartung)
 echo [S]Shutdown - Modul (Wartung)
 echo [T]Task - Modul (Beta)
 echo [tel]Telefonbuch - Modul (Beta)
+echo [W]Web - Modul (Beta)
 echo.
 echo [CUSTOM] get a Custom Module (Wartung)
 echo.
@@ -37,6 +38,7 @@ if %mdasw%==c goto command-line
 if %mdasw%==n goto notes
 if %mdasw%==t goto tasks
 if %mdasw%==tel goto telefonbuch
+if %mdasw%==w goto web-modul
 if %mdasw%==back goto END
 
 goto getModules
@@ -89,6 +91,12 @@ goto getModules
 :telefonbuch
 cls
 curl --output Scripts\modules\telefonbuch.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/telefonbuch.bat --ssl-no-revoke
+pause
+goto getModules
+
+:web-modul
+cls
+curl --output Scripts\modules\web-mobul.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/web-modul.bat --ssl-no-revoke
 pause
 goto getModules
 

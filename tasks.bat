@@ -80,7 +80,7 @@ if exist "Scripts\modules\datas\un\*.tsk" (goto anyways) else (goto final)
 
 :anyways
 cls
-for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\un\*.tsk" "\Scripts\modules\datas\un\*.date"') do @echo %%~ni>>"Scripts\modules\datas\un\tasks.tsks"
+for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\un\*.tsk" "Scripts\modules\datas\un\*.date"') do @echo %%~ni>>"Scripts\modules\datas\un\tasks.tsks"
 echo Unerledigt: 
 echo ###################################################
 echo.
@@ -91,7 +91,7 @@ del Scripts\modules\datas\un\tasks.tsks
 if exist "Scripts\modules\datas\erledigt\*.tsk" (goto final) else (goto dialog)
 
 :final
-for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\erledigt\*.tsk" "\Scripts\modules\datas\erledigt\*.date"') do @echo %%~ni>>"Scripts\modules\datas\erledigt\tasks.tsks"
+for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\erledigt\*.tsk" "Scripts\modules\datas\erledigt\*.date"') do @echo %%~ni>>"Scripts\modules\datas\erledigt\tasks.tsks"
 echo.
 echo Erledigt: 
 echo ###################################################

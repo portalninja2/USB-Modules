@@ -1,8 +1,11 @@
 @echo off
 @title Notizen
 cls
+attrib +h +s Dokumente\Notizen.txt
 
 :menu
+SET /p colors=<Scripts\modules\Color.txt
+color %colors%
 cls
 echo.
 echo Treffe eine Auswahl
@@ -66,6 +69,7 @@ if "%hr:~0,1%" == " " SET hr=0%hr:~1,1%
 set min=%time:~3,2%
 set sek=%time:~6,2%
 
+attrib -h -s Dokumente\Notizen.txt
 move Dokumente\Notizen.txt BackUP's\local\
 ren BackUP's\local\Notizen.txt %YYYY%-%MM%-%DD%_%hr%-%min%_Notizen-BackUP.txt
 del Dokumente\Notizen.txt

@@ -66,11 +66,11 @@ echo. >> Scripts\modules\datas\tel\"%title%".tsk
 goto menu
 
 :show
-if exist "\Scripts\modules\datas\tel\*.tsk" (goto anyways) else (goto notask)
+if exist "Scripts\modules\datas\tel\*.tsk" (goto anyways) else (goto notask)
 
 :anyways
 cls
-for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\tel\*.tsk" "\Scripts\modules\datas\tel\*.date"') do @echo %%~ni>>"Scripts\modules\datas\tel\tasks.tsks"
+for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\tel\*.tsk" "\Scripts\modules\datas\tel\*.date"') do @echo %%~ni>>"Scripts\modules\datas\tel\tasks.tsks"
 echo Telefonbuch: 
 echo ###################################################
 echo.

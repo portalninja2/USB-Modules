@@ -25,7 +25,7 @@ goto menu
 
 :start
 cls
-for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\web\*.bat"') do @echo %%~ni>>"Scripts\modules\datas\web\websites.wb"
+for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\web\*.bat"') do @echo %%~ni>>"Scripts\modules\datas\web\websites.wb"
 echo Links (starten):
 echo ============================================
 echo.
@@ -62,7 +62,7 @@ echo exit >> Scripts\modules\datas\web\%name%.bat
 goto menu
 
 :remove
-for /f "delims=?" %%i in ('dir /b /a /s "\Scripts\modules\datas\web\*.bat"') do @echo %%~ni>>"Scripts\modules\datas\web\websites.wb"
+for /f "delims=?" %%i in ('dir /b /a /s "Scripts\modules\datas\web\*.bat"') do @echo %%~ni>>"Scripts\modules\datas\web\websites.wb"
 echo Links (entfernen):
 echo ============================================
 echo.
